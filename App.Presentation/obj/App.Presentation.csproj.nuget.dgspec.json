@@ -134,11 +134,15 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
-            "Microsoft.Extensions.Configuration.Abstractions": {
+            "Microsoft.AspNetCore.Authorization.Policy": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[2.2.0, )"
             },
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
             }

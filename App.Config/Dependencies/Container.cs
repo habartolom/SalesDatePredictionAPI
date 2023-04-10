@@ -4,12 +4,8 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace App.Config.Dependencies
 {
@@ -47,6 +43,16 @@ namespace App.Config.Dependencies
 						   c.Name.EndsWith("Validator") ||
 						   c.Name.EndsWith("Resource"))
 					.AsPublicImplementedInterfaces();
+
+			services.AddCors(options =>
+			{
+				options.AddPolicy("CorsPolicy", builder =>
+				{
+					builder.AllowAnyHeader();
+					builder.AllowAnyMethod();
+					builder.AllowAnyOrigin();
+				});
+			});
 		}
 
 	}
